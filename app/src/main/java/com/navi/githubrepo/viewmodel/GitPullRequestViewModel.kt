@@ -25,8 +25,8 @@ class GitPullRequestViewModel @Inject constructor(
     private fun fetchPullRequests() {
         viewModelScope.launch(Dispatchers.IO) {
             val closedPullRequests = gitPullRequestRepo.getClosedPullRequest(
-                "",
-                ""
+                "dinu005",
+                "GithubRepo"
             )
             pullRequestsLiveData.postValue(closedPullRequests)
         }
