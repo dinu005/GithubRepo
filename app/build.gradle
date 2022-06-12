@@ -44,6 +44,11 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
 
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.httplogger"
+
     testImplementation "junit:junit:$rootProject.junit"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
