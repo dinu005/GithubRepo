@@ -13,4 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.TextView.Title" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/quad_quad</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Theme.TextView.Subtitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/triple_quad</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="Theme.TextView.Desc" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">@dimen/double_quad</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
 </resources>
