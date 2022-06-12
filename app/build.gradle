@@ -36,6 +36,7 @@ android {
 dependencies {
 
     implementation "androidx.core:core-ktx:$rootProject.ktxCore"
+    implementation("androidx.activity:activity-ktx:$rootProject.ktxActivity")
     implementation "androidx.appcompat:appcompat:$rootProject.appcompat"
     implementation "com.google.android.material:material:$rootProject.material"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
@@ -43,6 +44,10 @@ dependencies {
     //dependency injection
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    //lifecycle components
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion"
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit"
