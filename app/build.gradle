@@ -59,6 +59,8 @@ dependencies {
     implementation "io.coil-kt:coil:$rootProject.coil"
 
     testImplementation "junit:junit:$rootProject.junit"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:$mockitoVersion"
+    testImplementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espresso"
 }
