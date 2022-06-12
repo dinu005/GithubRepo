@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quad">4dp</dimen>
+    <dimen name="double_quad">8dp</dimen>
+    <dimen name="triple_quad">12dp</dimen>
+    <dimen name="quad_quad">16dp</dimen>
+</resources>
