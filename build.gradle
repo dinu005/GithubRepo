@@ -24,6 +24,9 @@ ext {
     ktxCore = "1.8.0"
     material = "1.6.1"
 
+    lifecycleVersion = "2.4.1"
+    ktxActivity = "1.4.0"
+
     retrofit = "2.9.0"
     httplogger = "3.14.9"
 
