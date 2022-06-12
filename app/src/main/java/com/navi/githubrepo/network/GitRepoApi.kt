@@ -10,12 +10,10 @@ import retrofit2.http.Query
 interface GitRepoApi {
 
     @GET("/repos/{owner}/{repo}/pulls")
-    fun closedPullRequest(
+    fun getAllPullRequestsByState(
         @Path("owner") owner: String,
         @Path("repo") repo: String,
-        @Query("state") state: String = "closed",
-        @Header("Authorization") authorization: String,
-        @Header("Accept") accept: String = "application/vnd.github.v3+json"
+        @Query("state") state: String
     ): Call<List<PullRequest>>
 
 }

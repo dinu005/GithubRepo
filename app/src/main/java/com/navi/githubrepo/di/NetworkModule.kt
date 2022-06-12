@@ -1,9 +1,12 @@
 package com.navi.githubrepo.di
 
+import com.navi.githubrepo.di.scope.AuthenticationInterceptor
+import com.navi.githubrepo.network.AuthInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -21,9 +24,19 @@ object NetworkModule {
     }
 
     @Provides
-    fun providesHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    @AuthenticationInterceptor
+    fun providesAuthInterceptor(): Interceptor {
+        return AuthInterceptor()
+    }
+
+    @Provides
+    fun providesHttpClient(
+        loggingInterceptor: HttpLoggingInterceptor,
+        @AuthenticationInterceptor authInterceptor: Interceptor
+    ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
+            .addInterceptor(authInterceptor)
             .build()
     }
 
